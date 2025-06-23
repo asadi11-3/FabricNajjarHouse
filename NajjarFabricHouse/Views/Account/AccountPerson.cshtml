@@ -1,0 +1,108 @@
+﻿@model NajjarFabricHouse.Dto.AccountDto
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Account";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Fabric House Najjar</title>
+
+    <!-- Load Facebook SDK -->
+   
+</head>
+<body>
+    <div class="container" id="container">
+        <!-- Register Form -->
+        <div class="form-container sign-up">
+            <form asp-action="AccountPerson" method="post">
+                <h1>Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g" ></i></a>
+                    <a href="#" class="icon" ><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+
+                <!-- Hidden Field to determine action type -->
+                <input type="hidden" name="ActionType" value="Register" />
+
+                <input asp-for="RegisterUserName" class="form-control" placeholder="Name" />
+                <span asp-validation-for="RegisterUserName" style="color: red;"></span>
+
+                <input asp-for="RegisterEmail" class="form-control" type="email" placeholder="Email" />
+                <span asp-validation-for="RegisterEmail" style="color: red;"></span>
+
+                <input asp-for="RegisterPassword" class="form-control" type="password" placeholder="Password" />
+                <span asp-validation-for="RegisterPassword" style="color:red;"></span>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+
+        <!-- Login Form -->
+        <div class="form-container sign-in">
+            <form asp-action="AccountPerson" method="post">
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    
+                    <a href="https://localhost:44356/signin-facebook" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+
+                <span>or use your email and password</span>
+
+                <!-- Hidden Field to determine action type -->
+                <input type="hidden" name="ActionType" value="Login" />
+
+                <input asp-for="LoginUserName" class="form-control" placeholder="Username" />
+                <span asp-validation-for="LoginUserName" style="color:red;"></span>
+
+                <input asp-for="LoginPassword" class="form-control" type="password" placeholder="Password" />
+                <span asp-validation-for="LoginPassword" style="color:red;"></span>
+
+
+                <a asp-action="ForgotPassword" asp-controller="Account" type="button" style=" color:blue; cursor:pointer; text-decoration:underline;">Forgot Your Password?</a>
+
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+
+        <!-- Toggle Panel -->
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of the site's features</p>
+                    <button class="hidden" id="login" type="submit">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of the site's features</p>
+                    <button class="hidden" id="register" type="submit">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Initialize Facebook SDK -->
+    @section Scripts {
+
+    }
+
+
+    <!-- Existing JavaScript -->
+    <script src="~/js/script.js"></script>
+</body>
+</html>
+

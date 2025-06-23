@@ -1,0 +1,169 @@
+﻿@model IEnumerable<NajjarFabricHouse.Dto.UserDto>
+
+@{
+    ViewData["Title"] = "All Users";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Fabric House | User Management</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            color: #333;
+            background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+            font-family: 'Varela Round', sans-serif;
+            font-size: 14px;
+        }
+
+        .table-responsive {
+            margin: 30px auto;
+            max-width: 945px;
+        }
+
+        .table-wrapper {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .table-title {
+            text-align: center;
+            background: #6a5acd;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 20px;
+        }
+
+            .table-title h2 {
+                margin: 0;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+        table.table tr th,
+        table.table tr td {
+            padding: 12px 15px;
+            vertical-align: middle;
+            border-color: #ddd;
+            word-wrap: break-word;
+            max-width: 200px;
+        }
+
+        table.table-striped tbody tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+
+        table.table-striped.table-hover tbody tr:hover {
+            background: #f1f1f1;
+        }
+
+        .btn {
+            font-size: 13px;
+            padding: 5px 10px;
+            border: none;
+        }
+
+        .btn-outline-success {
+            background-color: transparent;
+            color: #6a5acd;
+        }
+
+            .btn-outline-success:hover {
+                background: #6a5acd;
+                color: #fff;
+            }
+
+        .btn-outline-primary {
+            background-color: transparent;
+            color: #007bff;
+        }
+
+            .btn-outline-primary:hover {
+                background: #007bff;
+                color: #fff;
+            }
+
+        .btn-outline-danger {
+            background-color: transparent;
+            color: #dc3545;
+        }
+
+            .btn-outline-danger:hover {
+                background: #dc3545;
+                color: #fff;
+            }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xl">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <h2> غرزة</h2>
+                </div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Roles</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            <tr>
+                                <td>@user.UserName</td>
+                                <td>@user.Email</td>
+                                <td>
+                                    @if (user.Roles != null && user.Roles.Any())
+                                    {
+                                        <ul>
+                                            @foreach (var role in user.Roles)
+                                            {
+                                                <li>@role</li>
+                                            }
+                                        </ul>
+                                    }
+                                    else
+                                    {
+                                        <span>No Roles</span>
+                                    }
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline-success"><i class="material-icons">edit</i> Edit Role</button>
+                                    <button class="btn btn-outline-primary"><i class="material-icons">visibility</i> Details</button>
+                                    <button class="btn btn-outline-danger"><i class="material-icons">person_remove</i> Remove User</button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

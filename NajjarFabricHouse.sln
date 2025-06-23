@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NajjarFabricHouse", "NajjarFabricHouse\NajjarFabricHouse.csproj", "{9E824282-49FA-42BB-B41C-AAF9A61156BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NajjarFabricHouse.API", "NajjarFabricHouse.API\NajjarFabricHouse.API.csproj", "{8C088484-8C69-4B7C-8C03-9FDDC4832116}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NajjarFabricHouse.Data", "NajjarFabricHouse.Data\NajjarFabricHouse.Data.csproj", "{1D3584A3-81B6-4FB5-823A-3C1517A86995}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NajjarFabricHouse.Service", "NajjarFabricHouse.Service\NajjarFabricHouse.Service.csproj", "{01943B5D-B5CA-4C33-AC63-7A30A8CD4DCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E824282-49FA-42BB-B41C-AAF9A61156BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E824282-49FA-42BB-B41C-AAF9A61156BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E824282-49FA-42BB-B41C-AAF9A61156BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E824282-49FA-42BB-B41C-AAF9A61156BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C088484-8C69-4B7C-8C03-9FDDC4832116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C088484-8C69-4B7C-8C03-9FDDC4832116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C088484-8C69-4B7C-8C03-9FDDC4832116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C088484-8C69-4B7C-8C03-9FDDC4832116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D3584A3-81B6-4FB5-823A-3C1517A86995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D3584A3-81B6-4FB5-823A-3C1517A86995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D3584A3-81B6-4FB5-823A-3C1517A86995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D3584A3-81B6-4FB5-823A-3C1517A86995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01943B5D-B5CA-4C33-AC63-7A30A8CD4DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01943B5D-B5CA-4C33-AC63-7A30A8CD4DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01943B5D-B5CA-4C33-AC63-7A30A8CD4DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01943B5D-B5CA-4C33-AC63-7A30A8CD4DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

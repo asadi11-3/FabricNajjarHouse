@@ -1,0 +1,21 @@
+﻿
+
+@model NajjarFabricHouse.Models.ErrorDto
+
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1 class="text-danger">Error.</h1>
+<h2 class="text-danger">An error occurred while processing your request.</h2>
+
+@if (Model?.ShowRequestId ?? false)
+{
+    <p>
+        Request ID: <strong>@Model.RequestId</strong>
+    </p>
+}
+else
+{
+    <p>No Request ID available.</p>
+}
